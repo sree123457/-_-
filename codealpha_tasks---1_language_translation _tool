@@ -1,0 +1,22 @@
+import googletrans
+from googletrans import Translator
+
+#print(googletrans.LANGUAGES)
+
+text1 = "artificial intelligence"
+
+text2 = "inteligencia artificial"
+
+text3 = "yapay zeka"
+
+
+translator = Translator()
+
+print(translator.detect(text1))
+print(translator.detect(text2))
+print(translator.detect(text3))
+
+#print("Translated From Spanish : ", translator.translate(text2))
+#print("Translated From Turkish : ", translator.translate(text3))
+print("Translate English to ESP : ", translator.translate(text1, src='en',dest='es'))
+print("Translate En to Tur : ", translator.translate(text1, src='en',dest='tr'))
